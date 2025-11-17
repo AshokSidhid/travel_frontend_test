@@ -36,6 +36,7 @@ export default function Login() {
     <div className="auth-container travel-theme">
       <div className="auth-box">
         <h2>Login to TravelEase</h2>
+        <p className="demo-hint">Demo login: <strong>demo</strong> / <strong>demo123</strong></p>
         <form onSubmit={handleLogin}>
           <input type="text" placeholder="Username"
                  onChange={(e) => setForm({ ...form, username: e.target.value })} required />

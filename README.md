@@ -1,16 +1,48 @@
-# React + Vite
+# Travel Frontend (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple travel management front-end built with React and Vite, deployed using GitHub Actions to GitHub Pages.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **URL:** https://ashoksidhid.github.io/travel_frontend_test/
 
-## React Compiler
+## Demo Login Credentials
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+For front-end-only demo deployments (like GitHub Pages), use the following credentials on the login page:
 
-## Expanding the ESLint configuration
+- **Username:** `demo`
+- **Password:** `demo123`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+These are handled entirely on the front-end and do **not** require a running backend.
+
+## Development
+
+### Install and run locally
+
+```bash
+npm install
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## CI/CD and Deployment
+
+GitHub Actions is configured in `.github/workflows/deploy.yml` to:
+
+- Run on every push to the `main` branch
+- Install dependencies
+- Build the Vite app
+- Deploy the `dist` folder to the `gh-pages` branch for GitHub Pages hosting
+
+The Vite config sets the base path to:
+
+```js
+base: '/travel_frontend_test/',
+```
+
+so that assets resolve correctly at the GitHub Pages URL.
